@@ -1,0 +1,29 @@
+﻿# Python
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# 密钥与本地环境
+.env
+*.env.local
+
+# 数据与模型（大文件不入库）
+data/
+models/
+uploads/
+*.db
+
+# 工具/编辑器
+.idea/
+.vscode/
+.DS_Store
+
+install_logs/
+.codeartsdoer
+
+SmartKB2.0_30天实施计划.md
+NOTES.md
+install-checklist.md
