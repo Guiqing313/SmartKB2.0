@@ -17,7 +17,7 @@ docs = [
 vecs = model.encode(docs, return_dense=True)["dense_vecs"]
 
 # 4. 存入 Milvus（注意 dimension=1024，和 bge-m3 一致！）
-client = MilvusClient("D:/codex使用文件夹/SmartKB2.0/data/milvus_lite.db")
+client = MilvusClient("D:/milvus_lite/milvus_lite.db")
 client.create_collection(collection_name="kb_bge", dimension=1024, metric_type="COSINE")
 rows = [{"id": i+1, "vector": vecs[i].tolist(), "text": docs[i]} for i in range(len(docs))]
 client.insert("kb_bge", rows)
